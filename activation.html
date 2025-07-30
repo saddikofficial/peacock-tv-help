@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activation Successful - Peacock TV</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0B0E11;
+            color: #FFFFFF;
+        }
+        .peacock-gradient {
+            background: linear-gradient(90deg, #005F92 0%, #8A2BE2 100%);
+        }
+        .fixed-call-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4B94E5; /* Button background color */
+            color: white; /* Text color */
+            padding: 12px 16px; /* Padding */
+            border-radius: 50px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            font-size: 16px; /* Font size */
+            transition: background-color 0.3s; /* Transition effect */
+        }
+        .fixed-call-button:hover {
+            background-color: #3A7BC2; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="bg-[#1A1D24] rounded-xl p-10 md:p-14 shadow-lg text-center">
+        <div class="mb-8" style="outline: #00FF00 solid 2px; outline-offset: 8px; border-radius: 9999px; display: inline-flex; padding: 12px;">
+            <svg class="w-20 h-20 text-green-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+            </svg>
+        </div>
+       <!--  <h2 class="text-3xl md:text-4xl font-bold mb-6">Successfully Activated!</h2> -->
+        <p class="text-xl mb-8">Your activation code was submitted successfully.</p>
+        <p class="text-white/70 mb-10">Next Step- Contact support line to activate your device!</p>
+        <div class="flex flex-col space-y-4">
+            <a href="tel:1-844-403-8679" class="px-8 py-4 peacock-gradient rounded-lg font-bold text-white text-lg hover:opacity-90 transition">
+                📞 Call Now (844) 403-8679
+            </a>
+            <p class="text-xl mb-8">or</p>
+            <h2 class="text-xl md:text-2xl font-bold mb-6">Activate your device without a code</h2>
+            <a href="tel:1-844-403-8679" class="px-8 py-4 peacock-gradient rounded-lg font-bold text-white text-lg hover:opacity-90 transition">
+                📞 Call 1-844-403-8679
+            </a>
+        </div>
+    </div>
+    <a href="tel:+18334089389" class="fixed-call-button">
+        Call Us
+    </a>
+</body>
+</html>
