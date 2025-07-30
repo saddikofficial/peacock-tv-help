@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Peacock TV - Activate Your Device</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #0B0E11;
+            color: #FFFFFF;
+        }
+        
+        .peacock-gradient {
+            background: linear-gradient(90deg, #005F92 0%, #8A2BE2 100%);
+        }
+        
+        .input-container:focus-within {
+            border-color: #4B94E5;
+        }
+        
+        .code-digit {
+            transition: all 0.2s ease;
+        }
+        
+        .code-digit:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(75, 148, 229, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="relative pt-4 px-4 sm:px-6 md:px-8 lg:px-12">
+            <div class="flex justify-center">
+                <div class="w-48 md:w-64 mx-auto">
+                    <img src="https://cdn2.steamgriddb.com/logo_thumb/9b35be35d9c1a468c6f388c90b5be1f9.png" alt="Peacock TV logo in white text on dark background" class="w-full" />
+                </div>
+                <div class="absolute right-4 top-4">
+                    <button class="bg-transparent hover:bg-white/10 text-white font-semibold py-2 px-4 rounded-full border border-white/20 text-sm md:text-base transition">
+                       <a href="signin.html"> Sign In</a>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex items-center justify-center px-4">
+            <div class="w-full max-w-4xl">
+                <div id="activationForm" class="bg-[#1A1D24] rounded-xl p-5 sm:p-8 md:p-10 shadow-lg">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4">Activate Your Device</h1>
+                    <p class="text-center text-white/70 mb-8 md:mb-12">Follow these steps to start streaming on your device</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                        <!-- Instructions -->
+                        <div class="order-2 md:order-1">
+                            <div class="flex items-start mb-8">
+                                <div class="flex-shrink-0 peacock-gradient w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center font-bold text-white mr-3 sm:mr-4 text-sm sm:text-base">1</div>
+                                <div>
+                                    <h3 class="font-semibold text-base sm:text-lg mb-1">Call Help <span class="text-[#4B94E5] text-base sm:text-base"><a href="tel:18334089389">18334089389</a></span> to activate your device on phone</h3>
+                                    <p class="text-white/60 text-sm sm:text-sm">(You're already here!)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start mb-8">
+                                <div class="flex-shrink-0 peacock-gradient w-8 h-8 rounded-full flex items-center justify-center font-bold text-white mr-4">2</div>
+                                <div>
+                                    <h3 class="font-semibold text-lg mb-1">Enter the code below</h3>
+                                    <p class="text-white/60 text-sm">This should appear on your TV screen</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 peacock-gradient w-8 h-8 rounded-full flex items-center justify-center font-bold text-white mr-4">3</div>
+                                <div>
+                                    <h3 class="font-semibold text-lg mb-1">Start streaming</h3>
+                                    <p class="text-white/60 text-sm">Enjoy your favorite shows and movies</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Activation Section -->
+                        <div class="order-1 md:order-2">
+                            <div class="bg-[#252A33] rounded-lg p-4 sm:p-6 mb-6">
+                                <h3 class="font-semibold text-center mb-4">Enter Your Activation Code</h3>
+                                
+                                <div class="mb-6" id="codeContainer">
+                                    <div class="flex justify-center gap-1 sm:gap-2 px-2 sm:px-4">
+                                        <input type="text" maxlength="1" class="code-digit w-8 h-12 sm:w-10 sm:h-14 md:w-12 md:h-16 bg-[#333842] rounded text-center text-lg sm:text-xl md:text-2xl font-bold focus:bg-[#3A414D]" data-index="0">
+                                        <input type="text" maxlength="1" class="code-digit w-8 h-12 sm:w-10 sm:h-14 md:w-12 md:h-16 bg-[#333842] rounded text-center text-lg sm:text-xl md:text-2xl font-bold focus:bg-[#3A414D]" data-index="1">
+                                        <input type="text" maxlength="1" class="code-digit w-8 h-12 sm:w-10 sm:h-14 md:w-12 md:h-16 bg-[#333842] rounded text-center text-lg sm:text-xl md:text-2xl font-bold focus:bg-[#3A414D]" data-index="2">
+                                        <input type="text" maxlength="1" class="code-digit w-8 h-12 sm:w-10 sm:h-14 md:w-12 md:h-16 bg-[#333842] rounded text-center text-lg sm:text-xl md:text-2xl font-bold focus:bg-[#3A414D]" data-index="3">
+                                        <span class="w-8 h-12 md:w-12 md:h-16 flex items-center justify-center text-xl md:text-2xl">-</span>
+                                        <input type="text" maxlength="1" class="code-digit w-8 h-12 sm:w-10 sm:h-14 md:w-12 md:h-16 bg-[#333842] rounded text-center text-lg sm:text-xl md:text-2xl font-bold focus:bg-[#3A414D]" data-index="4">
+                                        <input type="text" maxlength="1" class="code-digit w-8 h-12 sm:w-10 sm:h-14 md:w-12 md:h-16 bg-[#333842] rounded text-center text-lg sm:text-xl md:text-2xl font-bold focus:bg-[#3A414D]" data-index="5">
+                                        <input type="text" maxlength="1" class="code-digit w-8 h-12 sm:w-10 sm:h-14 md:w-12 md:h-16 bg-[#333842] rounded text-center text-lg sm:text-xl md:text-2xl font-bold focus:bg-[#3A414D]" data-index="6">
+                                        <input type="text" maxlength="1" class="code-digit w-8 h-12 sm:w-10 sm:h-14 md:w-12 md:h-16 bg-[#333842] rounded text-center text-lg sm:text-xl md:text-2xl font-bold focus:bg-[#3A414D]" data-index="7">
+                                    </div>
+                                </div>
+                                
+                                <button id="continueBtn"  class="w-full py-3 peacock-gradient rounded-lg font-semibold text-white opacity-50 cursor-not-allowed">Continue</button>
+                            </div>
+                            
+                            <div class="text-center">
+                                <p class="text-sm text-white/50 mb-1">Don't see a code on your screen?</p>
+                                <button class="text-[#4B94E5] hover:text-[#3A7BC2] font-semibold text-sm transition"><a href="tel:18334089389">Need help with activation? call us 1-833-408-9389</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+               
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-auto py-6 px-4 sm:px-6 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-col gap-3 sm:gap-4 md:flex-row md:justify-between md:items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-sm text-white/50">© 2023 Peacock TV. All Rights Reserved.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                        <button class="text-sm text-white/70 hover:text-white transition">Privacy Policy</button>
+                        <button class="text-sm text-white/70 hover:text-white transition">Terms of Service</button>
+                        <button class="text-sm text-white/70 hover:text-white transition">Help</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const codeInputs = document.querySelectorAll('.code-digit');
+            const continueBtn = document.getElementById('continueBtn');
+            
+            // Handle code input navigation
+            codeInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    const index = parseInt(this.dataset.index);
+                    const value = this.value.toUpperCase();
+                    this.value = value;
+                    
+                    if (value && index < codeInputs.length - 1) {
+                        codeInputs[index + 1].focus();
+                    }
+                    
+                    checkCodeCompletion();
+                });
+                
+                input.addEventListener('keydown', function(e) {
+                    const index = parseInt(this.dataset.index);
+                    
+                    if (e.key === 'Backspace' && !this.value && index > 0) {
+                        codeInputs[index - 1].focus();
+                    }
+                });
+            });
+            
+            // Check if all code digits are filled
+            function checkCodeCompletion() {
+                let allFilled = true;
+                codeInputs.forEach(input => {
+                    if (!input.value) {
+                        allFilled = false;
+                    }
+                });
+                
+                if (allFilled) {
+                    continueBtn.disabled = false;
+                    continueBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                    continueBtn.classList.add('hover:opacity-90');
+                } else {
+                    continueBtn.disabled = true;
+                    continueBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                    continueBtn.classList.remove('hover:opacity-90');
+                }
+            }
+            
+            
+            // Continue button click handler
+ continueBtn.addEventListener('click', function() {
+                if (this.disabled) return;
+                
+                let activationCode = '';
+                codeInputs.forEach(input => {
+                    activationCode += input.value;
+                    input.value = ''; // Clear inputs for demo
+                });
+                
+                continueBtn.disabled = true;
+                continueBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                continueBtn.classList.remove('hover:opacity-90');
+    
+    // Redirect to confirmation page
+    window.location.href = 'activation.html';
+});
+
+        });
+    </script>
+   <p style="color: white;font-size: 12px; text-align: center;"> Disclaimer: This is a third-party site and not affiliated with Peacock TV.</p>
+</body>
+</html>
